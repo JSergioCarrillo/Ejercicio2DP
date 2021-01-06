@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<h1>Formulario persons</h1>
+
+<form action="/Home/index" method="POST">
+    <div class="mb-3">
+        <label for="DistributorId" class="form-label">Distributor ID:</label>
+        <input type="text" class="form-control" name="DistributorId" id="DistributorId">
+    </div>
+    <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" name="Nombre" id="Nombre">
+    </div>
+    <div class="mb-3">
+        <label for="ApellidoPaterno" class="form-label">Apellido paterno:</label>
+        <input type="text" class="form-control" name="ApellidoPaterno" id="ApellidoPaterno">
+    </div>
+    <div class="mb-3">
+        <label for="ApellidoMaterno" class="form-label">Apellido materno:</label>
+        <input type="text" class="form-control" name="ApellidoMaterno" id="ApellidoMaterno">
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

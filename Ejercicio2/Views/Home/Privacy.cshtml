@@ -1,0 +1,35 @@
+@model IEnumerable<Informacion>
+@{
+    ViewData["Title"] = "Consultar";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form action="/Home/privacy" method="POST">
+    <div class="mb-3">
+        <label for="distributorid" class="form-label">Distributor ID:</label>
+        <input type="text" class="form-control" name="distributorid" id="distributorid">
+    </div>
+    <button type="submit" class="btn btn-primary">Consultar</button>
+</form>
+
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Nombre completo</th>
+      <th scope="col">Calle</th>
+      <th scope="col">Numero de casa</th>
+      <th scope="col">Colonia</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var item in Model)
+      {
+        <tr>
+            <td>@item.NombreCompleto</td>
+            <td>@item.Calle</td>
+            <td>@item.NumeroCasa</td>
+            <td>@item.Colonia</td>
+        </tr>
+      }
+  </tbody>
+</table>
